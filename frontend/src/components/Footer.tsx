@@ -103,13 +103,13 @@ const Footer: React.FC = () => {
               <h4 className="text-lg font-semibold text-white mb-4">Get In Touch</h4>
               <div className="space-y-3">
                 <div className="text-gray-400">
-                  <p className="text-sm">📧 your.email@example.com</p>
+                  <p className="text-sm">📧 sonawaneganu3101@gmail.com</p>
                 </div>
                 <div className="text-gray-400">
-                  <p className="text-sm">📱 +1 (555) 123-4567</p>
+                  <p className="text-sm">📱 +91 8010100628</p>
                 </div>
                 <div className="text-gray-400">
-                  <p className="text-sm">📍 San Francisco, CA</p>
+                  <p className="text-sm">📍 GCOEARA, Pune</p>
                 </div>
               </div>
 
@@ -126,7 +126,7 @@ const Footer: React.FC = () => {
             <div className="flex flex-col md:flex-row justify-between items-center gap-4">
               {/* Copyright */}
               <div className="flex items-center gap-2 text-gray-400 text-sm">
-                <span>© {currentYear} Your Name. Made with</span>
+                <span>© {currentYear} Ganesh. Made with</span>
                 <FaHeart className="text-red-400" />
                 <span>and lots of ☕</span>
               </div>
