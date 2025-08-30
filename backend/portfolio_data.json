@@ -1,0 +1,320 @@
+{
+  "contacts": [
+    {
+      "id": "1",
+      "name": "Ganesh Sonawane",
+      "email": "sonawaneganu3101@gmail.com",
+      "subject": "Ganesh Sonawane",
+      "message": "Hi, Testing",
+      "created_at": "2025-08-30 21:01:06.369710"
+    },
+    {
+      "id": "2",
+      "name": "Ganesh Sonawane",
+      "email": "sonawaneganu3101@gmail.com",
+      "subject": "Ganesh Sonawane",
+      "message": "cA",
+      "created_at": "2025-08-30 21:02:21.633849"
+    },
+    {
+      "id": "3",
+      "name": "Ganesh Sonawane",
+      "email": "sonawaneganu3101@gmail.com",
+      "subject": "Ganesh Sonawane",
+      "message": "ggjk",
+      "created_at": "2025-08-30 21:14:02.075309"
+    }
+  ],
+  "projects": [
+    {
+      "id": "1",
+      "title": "E-Commerce Platform",
+      "description": "A full-stack e-commerce solution with payment integration, inventory management, and admin dashboard.",
+      "technologies": [
+        "React",
+        "Node.js",
+        "MongoDB",
+        "Stripe",
+        "Redux",
+        "Express"
+      ],
+      "github_url": "https://github.com/username/ecommerce-platform",
+      "live_url": "https://ecommerce-demo.vercel.app",
+      "featured": true,
+      "created_at": "2025-08-30 20:13:51.276997"
+    },
+    {
+      "id": "2",
+      "title": "Task Management Dashboard",
+      "description": "A collaborative project management tool with real-time updates and team collaboration features.",
+      "technologies": [
+        "React",
+        "TypeScript",
+        "Socket.io",
+        "Tailwind CSS",
+        "Chart.js"
+      ],
+      "github_url": "https://github.com/username/task-management",
+      "live_url": "https://taskflow-demo.netlify.app",
+      "featured": true,
+      "created_at": "2025-08-30 20:13:51.276997"
+    },
+    {
+      "id": "3",
+      "title": "AI Content Generator",
+      "description": "An AI-powered content generation tool using OpenAI API for blogs, social media, and marketing copy.",
+      "technologies": [
+        "Next.js",
+        "OpenAI API",
+        "PostgreSQL",
+        "Prisma",
+        "Stripe"
+      ],
+      "github_url": "https://github.com/username/ai-content-generator",
+      "live_url": "https://ai-content-gen.vercel.app",
+      "featured": false,
+      "created_at": "2025-08-30 20:13:51.276997"
+    },
+    {
+      "id": "4",
+      "title": "Weather Analytics App",
+      "description": "A weather forecasting application with detailed analytics and data visualization.",
+      "technologies": [
+        "Vue.js",
+        "D3.js",
+        "Weather API",
+        "Chart.js",
+        "PWA"
+      ],
+      "github_url": "https://github.com/username/weather-analytics",
+      "live_url": "https://weather-analytics.netlify.app",
+      "featured": false,
+      "created_at": "2025-08-30 20:13:51.276997"
+    },
+    {
+      "id": "5",
+      "title": "Blockchain Voting System",
+      "description": "A secure, transparent voting system built on blockchain technology.",
+      "technologies": [
+        "Solidity",
+        "Web3.js",
+        "React",
+        "MetaMask",
+        "IPFS"
+      ],
+      "github_url": "https://github.com/username/blockchain-voting",
+      "live_url": "https://blockchain-vote.vercel.app",
+      "featured": false,
+      "created_at": "2025-08-30 20:13:51.276997"
+    },
+    {
+      "id": "6",
+      "title": "Real-time Chat Application",
+      "description": "A modern chat application with real-time messaging, file sharing, and video calls.",
+      "technologies": [
+        "React",
+        "Socket.io",
+        "WebRTC",
+        "Node.js",
+        "MongoDB"
+      ],
+      "github_url": "https://github.com/username/chat-app",
+      "live_url": "https://realtime-chat-demo.herokuapp.com",
+      "featured": false,
+      "created_at": "2025-08-30 20:13:51.276997"
+    }
+  ],
+  "skills": {
+    "Frontend": [
+      {
+        "name": "React",
+        "level": 95,
+        "color": "#61DAFB"
+      },
+      {
+        "name": "TypeScript",
+        "level": 90,
+        "color": "#3178C6"
+      },
+      {
+        "name": "Next.js",
+        "level": 85,
+        "color": "#000000"
+      },
+      {
+        "name": "JavaScript",
+        "level": 95,
+        "color": "#F7DF1E"
+      },
+      {
+        "name": "Tailwind CSS",
+        "level": 90,
+        "color": "#06B6D4"
+      },
+      {
+        "name": "HTML5",
+        "level": 95,
+        "color": "#E34F26"
+      },
+      {
+        "name": "CSS3",
+        "level": 90,
+        "color": "#1572B6"
+      }
+    ],
+    "Backend": [
+      {
+        "name": "Node.js",
+        "level": 90,
+        "color": "#339933"
+      },
+      {
+        "name": "Python",
+        "level": 85,
+        "color": "#3776AB"
+      },
+      {
+        "name": "Express.js",
+        "level": 85,
+        "color": "#000000"
+      },
+      {
+        "name": "GraphQL",
+        "level": 80,
+        "color": "#E10098"
+      }
+    ],
+    "Database": [
+      {
+        "name": "MongoDB",
+        "level": 85,
+        "color": "#47A248"
+      },
+      {
+        "name": "PostgreSQL",
+        "level": 80,
+        "color": "#4169E1"
+      },
+      {
+        "name": "Redis",
+        "level": 75,
+        "color": "#DC382D"
+      },
+      {
+        "name": "Firebase",
+        "level": 80,
+        "color": "#FFCA28"
+      }
+    ],
+    "Tools & Cloud": [
+      {
+        "name": "Git",
+        "level": 90,
+        "color": "#F05032"
+      },
+      {
+        "name": "Docker",
+        "level": 75,
+        "color": "#2496ED"
+      },
+      {
+        "name": "AWS",
+        "level": 70,
+        "color": "#FF9900"
+      },
+      {
+        "name": "Vercel",
+        "level": 85,
+        "color": "#000000"
+      },
+      {
+        "name": "Figma",
+        "level": 80,
+        "color": "#F24E1E"
+      }
+    ]
+  },
+  "experience": [
+    {
+      "id": "1",
+      "title": "Senior Full Stack Developer",
+      "company": "Tech Solutions Inc.",
+      "location": "Remote",
+      "duration": "2023 - Present",
+      "description": [
+        "Led development of scalable web applications using React, Node.js, and MongoDB",
+        "Implemented CI/CD pipelines reducing deployment time by 70%",
+        "Mentored junior developers and conducted code reviews",
+        "Architected microservices infrastructure handling 1M+ daily requests"
+      ],
+      "technologies": [
+        "React",
+        "Node.js",
+        "MongoDB",
+        "AWS",
+        "Docker",
+        "TypeScript"
+      ]
+    },
+    {
+      "id": "2",
+      "title": "Full Stack Developer",
+      "company": "Digital Innovations Ltd.",
+      "location": "New York, NY",
+      "duration": "2022 - 2023",
+      "description": [
+        "Developed and maintained multiple client projects using modern web technologies",
+        "Collaborated with UI/UX designers to implement pixel-perfect designs",
+        "Optimized application performance resulting in 40% faster load times",
+        "Integrated third-party APIs and payment systems"
+      ],
+      "technologies": [
+        "Vue.js",
+        "Python",
+        "PostgreSQL",
+        "Redis",
+        "GraphQL"
+      ]
+    },
+    {
+      "id": "3",
+      "title": "Frontend Developer",
+      "company": "StartupFlow",
+      "location": "San Francisco, CA",
+      "duration": "2021 - 2022",
+      "description": [
+        "Built responsive web applications with React and modern CSS frameworks",
+        "Collaborated with backend team to design and implement RESTful APIs",
+        "Implemented state management solutions using Redux and Context API",
+        "Participated in agile development processes and sprint planning"
+      ],
+      "technologies": [
+        "React",
+        "Redux",
+        "Tailwind CSS",
+        "JavaScript",
+        "REST APIs"
+      ]
+    },
+    {
+      "id": "4",
+      "title": "Junior Web Developer",
+      "company": "WebCraft Agency",
+      "location": "Austin, TX",
+      "duration": "2020 - 2021",
+      "description": [
+        "Developed responsive websites for small to medium businesses",
+        "Learned and applied modern web development best practices",
+        "Worked with content management systems and e-commerce platforms",
+        "Provided technical support and maintenance for client websites"
+      ],
+      "technologies": [
+        "HTML5",
+        "CSS3",
+        "JavaScript",
+        "WordPress",
+        "PHP"
+      ]
+    }
+  ]
+}
