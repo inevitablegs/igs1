@@ -5,23 +5,15 @@
 
 /* Lavender Purple Supernatural Theme */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
   scroll-behavior: smooth;
 }
 
 body {
-  margin: 0;
   font-family: 'Inter', system-ui, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   background: linear-gradient(135deg, #0f0f23 0%, #1e1b4b 50%, #312e81 100%);
   background-attachment: fixed;
   color: #e0d4ff;
   overflow-x: hidden;
-  min-height: 100vh;
-  position: relative;
 }
 
 /* Supernatural Background Effects */
@@ -60,10 +52,6 @@ body::after {
   z-index: -1;
 }
 
-code {
-  font-family: 'Orbitron', monospace;
-}
-
 /* Glass morphism effect */
 .glass-card {
   background: rgba(157, 141, 241, 0.1);
@@ -72,8 +60,6 @@ code {
   box-shadow: 
     0 8px 32px rgba(107, 70, 193, 0.2),
     inset 0 1px 0 rgba(255, 255, 255, 0.1);
-  border-radius: 12px;
-  transition: all 0.3s ease;
 }
 
 .glass-card:hover {
@@ -92,13 +78,13 @@ code {
     0 0 30px rgba(157, 141, 241, 0.4),
     inset 0 1px 0 rgba(255, 255, 255, 0.1);
   overflow: hidden;
-  font-family: 'Orbitron', monospace;
 }
 
 .mystical-header {
   background: linear-gradient(90deg, rgba(157, 141, 241, 0.2), rgba(192, 132, 252, 0.2));
   padding: 12px 20px;
   border-bottom: 1px solid rgba(157, 141, 241, 0.3);
+  font-family: 'Orbitron', monospace;
   font-size: 14px;
   color: #c8b5ff;
   display: flex;
@@ -124,8 +110,6 @@ code {
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
-  text-transform: uppercase;
-  letter-spacing: 1px;
 }
 
 .supernatural-button::before {
@@ -174,22 +158,12 @@ code {
     0 0 60px rgba(157, 141, 241, 0.2);
 }
 
-/* Custom scrollbar */
-::-webkit-scrollbar {
-  width: 8px;
-}
-
-::-webkit-scrollbar-track {
-  background: rgba(30, 27, 75, 0.3);
-}
-
-::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, #9d8df1, #c8b5ff);
-  border-radius: 4px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(180deg, #b794f6, #e0d4ff);
+/* Cosmic grid background */
+.cosmic-grid {
+  background-image: 
+    linear-gradient(rgba(157, 141, 241, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(157, 141, 241, 0.1) 1px, transparent 1px);
+  background-size: 50px 50px;
 }
 
 /* Floating particles animation */
@@ -206,87 +180,7 @@ code {
   100% { background-position: 0% 50%; }
 }
 
-/* Mystical glow effect */
-.mystical-glow {
-  background: linear-gradient(
-    45deg,
-    transparent 30%,
-    rgba(157, 141, 241, 0.1) 50%,
-    transparent 70%
-  );
-  background-size: 200% 200%;
-  animation: mystical-wave 4s ease-in-out infinite;
-  position: relative;
-}
-
-.mystical-glow::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: repeating-linear-gradient(
-    90deg,
-    transparent,
-    transparent 2px,
-    rgba(157, 141, 241, 0.03) 2px,
-    rgba(157, 141, 241, 0.03) 4px
-  );
-  pointer-events: none;
-}
-
-/* Ethereal text effect */
-.ethereal-text {
-  position: relative;
-  color: #9d8df1;
-  font-family: 'Cinzel', serif;
-  animation: ethereal-float 2s ease-in-out infinite;
-}
-
-.ethereal-text::before,
-.ethereal-text::after {
-  content: attr(data-text);
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-}
-
-.ethereal-text::before {
-  color: rgba(192, 132, 252, 0.5);
-  animation: ethereal-drift 3s ease-in-out infinite;
-  transform: translate(-1px, -1px);
-}
-
-.ethereal-text::after {
-  color: rgba(139, 92, 246, 0.3);
-  animation: ethereal-drift 3s ease-in-out infinite reverse;
-  transform: translate(1px, 1px);
-}
-
-/* Selection styling */
-::selection {
-  background: rgba(157, 141, 241, 0.3);
-  color: #e0d4ff;
-}
-
-/* Focus styles */
-*:focus {
-  outline: 2px solid rgba(157, 141, 241, 0.5);
-  outline-offset: 2px;
-}
-
-/* Cosmic grid background */
-.cosmic-grid {
-  background-image: 
-    linear-gradient(rgba(157, 141, 241, 0.1) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(157, 141, 241, 0.1) 1px, transparent 1px);
-  background-size: 50px 50px;
-}
-
-/* Starfall animation */
+/* Scroll animations */
 .parallax-stars {
   position: fixed;
   top: 0;
@@ -325,6 +219,36 @@ code {
     transform: translateY(100vh) translateX(-50px) rotate(180deg);
     opacity: 0;
   }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(30, 27, 75, 0.3);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #9d8df1, #c8b5ff);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #b794f6, #e0d4ff);
+}
+
+/* Selection styling */
+::selection {
+  background: rgba(157, 141, 241, 0.3);
+  color: #e0d4ff;
+}
+
+/* Focus styles */
+*:focus {
+  outline: 2px solid rgba(157, 141, 241, 0.5);
+  outline-offset: 2px;
 }
 
 /* Loading animation */
@@ -376,81 +300,4 @@ code {
   .mystical-window {
     backdrop-filter: blur(15px);
   }
-
-  body::after {
-    background-size: 100px 100px;
-  }
-}
-    
-
-/* Data stream animation */
-.data-stream {
-  position: absolute;
-  width: 2px;
-  height: 2px;
-  background: #00ff41;
-  box-shadow: 0 0 10px #00ff41;
-  animation: data-stream 1.5s linear infinite;
-}
-
-/* Neural network nodes */
-.neural-node {
-  position: absolute;
-  width: 4px;
-  height: 4px;
-  background: #00ff41;
-  border-radius: 50%;
-  box-shadow: 0 0 20px #00ff41;
-  animation: neural-network 8s ease-in-out infinite;
-}
-
-/* Quantum pulse effect */
-.quantum-pulse {
-  animation: quantum-pulse 3s ease-in-out infinite;
-}
-
-/* Matrix code background */
-.matrix-code {
-  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%2300ff41' fill-opacity='0.1'%3E%3Ctext x='5' y='15' font-family='monospace' font-size='12'%3E1%3C/text%3E%3Ctext x='25' y='35' font-family='monospace' font-size='12'%3E0%3C/text%3E%3Ctext x='45' y='55' font-family='monospace' font-size='12'%3E1%3C/text%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-  animation: matrix-code 20s linear infinite;
-}
-
-/* Cyberpunk selection */
-::selection {
-  background: rgba(0, 255, 65, 0.3);
-  color: #000000;
-  text-shadow: none;
-}
-
-::-moz-selection {
-  background: rgba(0, 255, 65, 0.3);
-  color: #000000;
-  text-shadow: none;
-}
-
-/* Typing animation */
-.typing-animation {
-  border-right: 2px solid #00ff41;
-  animation: terminal-cursor 1s infinite;
-}
-
-/* Neon text variations */
-.neon-green {
-  color: #00ff41;
-  text-shadow: 0 0 10px #00ff41, 0 0 20px #00ff41, 0 0 30px #00ff41;
-}
-
-.neon-pink {
-  color: #ff1744;
-  text-shadow: 0 0 10px #ff1744, 0 0 20px #ff1744, 0 0 30px #ff1744;
-}
-
-.neon-blue {
-  color: #00e5ff;
-  text-shadow: 0 0 10px #00e5ff, 0 0 20px #00e5ff, 0 0 30px #00e5ff;
-}
-
-.neon-purple {
-  color: #e91e63;
-  text-shadow: 0 0 10px #e91e63, 0 0 20px #e91e63, 0 0 30px #e91e63;
 }
