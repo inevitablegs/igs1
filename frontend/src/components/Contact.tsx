@@ -145,17 +145,28 @@ const Contact: React.FC = () => {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.8 }}
+          initial={{ opacity: 0, scale: 0.95, y: 50 }}
+          whileInView={{ opacity: 1, scale: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.2, margin: "-80px" }}
+          transition={{
+            duration: 1.2,
+            type: "spring",
+            stiffness: 90,
+            damping: 16
+          }}
         >
           {/* Mystical Section Header */}
           <motion.div 
             className="text-center mb-16"
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0, y: 80, rotateX: 25 }}
+            whileInView={{ opacity: 1, y: 0, rotateX: 0 }}
+            viewport={{ once: true, margin: "-60px" }}
+            transition={{ 
+              duration: 1.1,
+              type: "spring",
+              stiffness: 110,
+              damping: 14
+            }}
           >
             <div className="mystical-window max-w-4xl mx-auto">
               <div className="mystical-header">

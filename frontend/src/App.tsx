@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import './App.css';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
@@ -9,8 +10,43 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 
 function App() {
+  // Section transition variants
+  const sectionVariants = {
+    initial: { 
+      opacity: 0, 
+      y: 100,
+      scale: 0.95 
+    },
+    animate: { 
+      opacity: 1, 
+      y: 0,
+      scale: 1,
+      transition: {
+        duration: 1.0,
+        type: "spring" as const,
+        stiffness: 80,
+        damping: 20,
+        staggerChildren: 0.2
+      }
+    }
+  };
+
+  const containerVariants = {
+    animate: {
+      transition: {
+        staggerChildren: 0.8,
+        delayChildren: 0.5
+      }
+    }
+  };
+
   return (
-    <div className="relative min-h-screen bg-supernatural-dark text-mystic-lavender overflow-x-hidden">
+    <motion.div 
+      className="relative min-h-screen bg-supernatural-dark text-mystic-lavender overflow-x-hidden"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.8 }}
+    >
       {/* Cosmic Background Grid */}
       <div className="fixed inset-0 cosmic-grid opacity-10 pointer-events-none z-0"></div>
       
@@ -50,16 +86,30 @@ function App() {
       
       <div className="relative z-20">
         <Navbar />
-        <main>
-          <Hero />
-          <About />
-          <Skills />
-          <Projects />
-          <Contact />
-        </main>
+        <motion.main
+          variants={containerVariants}
+          initial="initial"
+          animate="animate"
+        >
+          <motion.div variants={sectionVariants}>
+            <Hero />
+          </motion.div>
+          <motion.div variants={sectionVariants}>
+            <About />
+          </motion.div>
+          <motion.div variants={sectionVariants}>
+            <Skills />
+          </motion.div>
+          <motion.div variants={sectionVariants}>
+            <Projects />
+          </motion.div>
+          <motion.div variants={sectionVariants}>
+            <Contact />
+          </motion.div>
+        </motion.main>
         <Footer />
       </div>
-    </div>
+    </motion.div>
   );
 }
 

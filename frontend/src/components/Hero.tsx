@@ -74,9 +74,20 @@ const Hero: React.FC = () => {
         <div className="text-center">
           {/* Profile Image with Mystical Aura */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.5 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 1, delay: 0.5 }}
+            initial={{ opacity: 0, scale: 0.3, rotateY: -90 }}
+            animate={{ opacity: 1, scale: 1, rotateY: 0 }}
+            transition={{ 
+              duration: 1.5, 
+              delay: 0.8,
+              type: "spring",
+              stiffness: 100,
+              damping: 15 
+            }}
+            whileHover={{
+              scale: 1.05,
+              rotateY: 10,
+              transition: { duration: 0.4, type: "spring" }
+            }}
             className="relative w-48 h-48 mx-auto mb-8"
           >
             <div className="absolute inset-0 rounded-full bg-gradient-to-r from-mystic-purple via-mystic-lavender to-ethereal-violet animate-cosmic-rotation"></div>
@@ -112,9 +123,20 @@ const Hero: React.FC = () => {
 
           {/* Mystical Name with Typing Effect */}
           <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 1 }}
+            initial={{ opacity: 0, y: 100, rotateX: 45 }}
+            animate={{ opacity: 1, y: 0, rotateX: 0 }}
+            transition={{ 
+              duration: 1.4, 
+              delay: 1.3,
+              type: "spring",
+              stiffness: 80,
+              damping: 20 
+            }}
+            whileHover={{
+              scale: 1.02,
+              y: -10,
+              transition: { duration: 0.3, type: "spring" }
+            }}
             className="mystical-window max-w-4xl mx-auto mb-8"
           >
             <div className="mystical-header">
@@ -142,9 +164,20 @@ const Hero: React.FC = () => {
 
           {/* Mystical Description */}
           <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 1.8 }}
+            initial={{ opacity: 0, y: 80, scale: 0.9 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            transition={{ 
+              duration: 1.1, 
+              delay: 1.8,
+              type: "spring",
+              stiffness: 90,
+              damping: 16
+            }}
+            whileHover={{
+              scale: 1.02,
+              y: -5,
+              transition: { duration: 0.3, type: "spring" }
+            }}
             className="mystical-window max-w-4xl mx-auto mb-12"
           >
             <div className="mystical-header">
@@ -165,9 +198,15 @@ const Hero: React.FC = () => {
 
           {/* Mystical Action Buttons */}
           <motion.div
-            initial={{ opacity: 0, y: 50 }}
+            initial={{ opacity: 0, y: 70 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 2 }}
+            transition={{ 
+              duration: 1.0, 
+              delay: 2.2,
+              type: "spring",
+              stiffness: 120,
+              damping: 14
+            }}
             className="flex flex-col sm:flex-row gap-8 justify-center mb-16"
           >
             <motion.button

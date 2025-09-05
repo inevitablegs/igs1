@@ -60,36 +60,47 @@ const Skills: React.FC = () => {
   ];
 
   const containerVariants = {
-    hidden: { opacity: 0 },
+    hidden: { opacity: 0, scale: 0.9 },
     visible: {
       opacity: 1,
+      scale: 1,
       transition: {
-        staggerChildren: 0.1,
-        delayChildren: 0.2,
+        duration: 0.8,
+        type: "spring" as const,
+        stiffness: 100,
+        damping: 15,
+        staggerChildren: 0.15,
+        delayChildren: 0.3,
       },
     },
   };
 
   const categoryVariants = {
-    hidden: { opacity: 0, y: 50 },
+    hidden: { opacity: 0, y: 80, rotateX: 20 },
     visible: {
       opacity: 1,
       y: 0,
+      rotateX: 0,
       transition: {
-        duration: 0.6,
-        ease: "easeOut" as const,
+        duration: 0.9,
+        type: "spring" as const,
+        stiffness: 120,
+        damping: 14,
       },
     },
   };
 
   const skillVariants = {
-    hidden: { opacity: 0, x: -50 },
+    hidden: { opacity: 0, x: -80, scale: 0.8 },
     visible: {
       opacity: 1,
       x: 0,
+      scale: 1,
       transition: {
-        duration: 0.5,
-        ease: "easeOut" as const,
+        duration: 0.7,
+        type: "spring" as const,
+        stiffness: 150,
+        damping: 12,
       },
     },
   };

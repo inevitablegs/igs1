@@ -34,10 +34,15 @@ const About: React.FC = () => {
       <div className="container mx-auto px-6 relative z-10">
         {/* Terminal Header */}
         <motion.div
-          initial={{ opacity: 0, y: -50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
+          initial={{ opacity: 0, y: -50, rotateX: 15 }}
+          whileInView={{ opacity: 1, y: 0, rotateX: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ 
+            duration: 1.2, 
+            type: "spring", 
+            stiffness: 100, 
+            damping: 15 
+          }}
           className="text-center mb-16"
         >
           <div className="terminal-window max-w-2xl mx-auto mb-8">
@@ -67,10 +72,16 @@ const About: React.FC = () => {
 
         {/* Bio Terminal */}
         <motion.div
-          initial={{ opacity: 0, x: -100 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 1 }}
+          initial={{ opacity: 0, x: -100, scale: 0.9 }}
+          whileInView={{ opacity: 1, x: 0, scale: 1 }}
+          viewport={{ once: true, margin: "-50px" }}
+          transition={{ 
+            duration: 1.4, 
+            type: "spring", 
+            stiffness: 80, 
+            damping: 20,
+            staggerChildren: 0.1 
+          }}
           className="terminal-window mb-16"
         >
           <div className="terminal-header">
@@ -103,11 +114,22 @@ const About: React.FC = () => {
           {specializations.map((spec, index) => (
             <motion.div
               key={spec.title}
-              initial={{ opacity: 0, y: 100 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: index * 0.2 }}
-              whileHover={{ scale: 1.05, y: -10 }}
+              initial={{ opacity: 0, y: 100, rotateY: -30, scale: 0.8 }}
+              whileInView={{ opacity: 1, y: 0, rotateY: 0, scale: 1 }}
+              viewport={{ once: true, margin: "-80px" }}
+              transition={{ 
+                duration: 1.0, 
+                delay: index * 0.3,
+                type: "spring",
+                stiffness: 120,
+                damping: 12
+              }}
+              whileHover={{ 
+                scale: 1.05, 
+                y: -15,
+                rotateY: 5,
+                transition: { duration: 0.3, type: "spring", stiffness: 200 }
+              }}
               className="cyber-card group relative overflow-hidden"
             >
               {/* Card Glow Effect */}
@@ -159,10 +181,16 @@ const About: React.FC = () => {
 
         {/* System Stats */}
         <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 1, delay: 0.5 }}
+          initial={{ opacity: 0, y: 80, scale: 0.95 }}
+          whileInView={{ opacity: 1, y: 0, scale: 1 }}
+          viewport={{ once: true, margin: "-60px" }}
+          transition={{ 
+            duration: 1.2, 
+            delay: 0.8,
+            type: "spring",
+            stiffness: 90,
+            damping: 18
+          }}
           className="mt-16 terminal-window"
         >
           <div className="terminal-header">
