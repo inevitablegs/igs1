@@ -41,7 +41,7 @@ const Hero: React.FC = () => {
   };
 
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
       {/* Cosmic Background */}
       <div className="absolute inset-0 cosmic-grid opacity-20"></div>
       
@@ -70,7 +70,7 @@ const Hero: React.FC = () => {
         ))}
       </div>
 
-      <div className="container mx-auto px-6 relative z-10">
+      <div className="container mx-auto px-6 relative z-10 mt-8">
         <div className="text-center">
           {/* Profile Image with Mystical Aura */}
           <motion.div
@@ -88,7 +88,7 @@ const Hero: React.FC = () => {
               rotateY: 10,
               transition: { duration: 0.4, type: "spring" }
             }}
-            className="relative w-48 h-48 mx-auto mb-8"
+            className="relative w-48 h-48 mx-auto mb-8 z-10"
           >
             <div className="absolute inset-0 rounded-full bg-gradient-to-r from-mystic-purple via-mystic-lavender to-ethereal-violet animate-cosmic-rotation"></div>
             <div className="absolute inset-2 rounded-full bg-supernatural-dark border-2 border-mystic-glow overflow-hidden">
