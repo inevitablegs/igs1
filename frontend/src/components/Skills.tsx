@@ -5,28 +5,15 @@ import {
   FaGamepad,
   FaBrain,
   FaRobot,
-  FaChartLine,
-  FaCode,
-  FaDatabase,
-  FaGitAlt,
-  FaDocker,
-  FaAws,
-  FaGithub
+  FaCode
 } from 'react-icons/fa';
 import { 
   SiTensorflow,
-  SiPytorch,
-  SiJupyter,
-  SiUnity,
-  SiBlender,
-  SiOpencv,
   SiScikitlearn,
-  SiKeras,
+  SiOpencv,
   SiNumpy,
   SiPandas,
-  SiMongodb,
-  SiPostgresql,
-  SiMysql
+  SiUnity
 } from 'react-icons/si';
 
 const Skills: React.FC = () => {
@@ -108,8 +95,35 @@ const Skills: React.FC = () => {
   };
 
   return (
-    <section id="skills" className="py-20 relative bg-gradient-to-b from-slate-800/30 to-slate-900/50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="skills" className="py-20 relative overflow-hidden">
+      {/* Supernatural Background */}
+      <div className="absolute inset-0 bg-gradient-to-b from-supernatural-deep via-supernatural-dark to-supernatural-deep"></div>
+      
+      {/* Optimized Background Elements */}
+      <div className="absolute inset-0 overflow-hidden">
+        {[...Array(6)].map((_, i) => (
+          <div
+            key={i}
+            className={`absolute ${
+              i % 2 === 0 ? 'w-6 h-6' : 'w-4 h-4'
+            } ${
+              i % 3 === 0 ? 'bg-gradient-to-br from-mystic-purple/20 to-ethereal-blue/20' :
+              'bg-gradient-to-br from-ethereal-pink/20 to-mystic-lavender/20'
+            } rounded-full blur-sm opacity-40`}
+            style={{
+              left: `${Math.random() * 100}%`,
+              top: `${Math.random() * 100}%`,
+            }}
+          />
+        ))}
+      </div>
+
+      {/* Mystical Grid Lines */}
+      <div className="absolute inset-0 opacity-10">
+        <div className="cosmic-grid h-full w-full"></div>
+      </div>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <motion.div
           variants={containerVariants}
           initial="hidden"
@@ -118,68 +132,80 @@ const Skills: React.FC = () => {
         >
           {/* Section Header */}
           <motion.div variants={categoryVariants} className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-primary-400 to-primary-600 bg-clip-text text-transparent">
-              Skills & Expertise
-            </h2>
-            <div className="w-24 h-1 bg-gradient-to-r from-primary-500 to-primary-700 mx-auto rounded-full mb-6"></div>
-            <p className="text-lg text-gray-400 max-w-2xl mx-auto">
-              Here are the technologies and tools I work with to bring ideas to life
-            </p>
+            <div className="mystical-window max-w-4xl mx-auto">
+              <div className="mystical-header">
+                <span className="text-mystic-glow">◈</span> SKILLS
+              </div>
+              <div className="p-8">
+                <h2 className="text-4xl md:text-6xl font-mystical font-bold mb-4 mystical-text">
+                  Technical Skills
+                </h2>
+                <div className="w-32 h-1 bg-gradient-to-r from-mystic-purple via-ethereal-blue to-ethereal-pink mx-auto rounded-full mb-6"></div>
+                <p className="text-lg text-mystic-lavender font-elegant">
+                  Technologies and tools I use to build innovative solutions
+                </p>
+              </div>
+            </div>
           </motion.div>
 
-          {/* Skills Grid */}
+          {/* Mystical Skills Constellation */}
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {skillCategories.map((category, categoryIndex) => (
               <motion.div
                 key={category.title}
                 variants={categoryVariants}
-                className="bg-dark-200/50 backdrop-blur-sm border border-primary-500/20 rounded-2xl p-6 glass hover:border-primary-400/40 transition-all duration-300"
+                whileHover={{ y: -5, rotateY: 5 }}
+                className="mystical-window hover:border-ethereal-blue/60 transition-all duration-500 group relative overflow-hidden"
               >
-                <h3 className="text-xl font-bold text-white mb-6 text-center">
-                  {category.title}
-                </h3>
+                {/* Mystical Category Header */}
+                <div className="mystical-header">
+                  <span className="text-ethereal-pink">◇</span> {category.title.toUpperCase()}
+                </div>
                 
-                <div className="space-y-4">
+                <div className="p-6 space-y-4">
                   {category.skills.map((skill, skillIndex) => {
                     const IconComponent = skill.icon;
                     return (
                       <motion.div
                         key={skill.name}
                         variants={skillVariants}
-                        whileHover={{ scale: 1.05 }}
-                        className="group"
+                        whileHover={{ scale: 1.03, x: 5 }}
+                        className="group/skill relative"
                       >
                         <div className="flex items-center justify-between mb-2">
                           <div className="flex items-center gap-3">
-                            <IconComponent 
-                              className="text-2xl transition-all duration-300 group-hover:scale-110" 
-                              style={{ color: skill.color }}
-                            />
-                            <span className="text-gray-300 font-medium group-hover:text-white transition-colors duration-300">
-                              {skill.name}
-                            </span>
+                            <div className="relative">
+                              <IconComponent 
+                                className="text-2xl transition-all duration-300" 
+                                style={{ color: skill.color }}
+                              />
+                            </div>
+                            <div>
+                              <span className="text-mystic-lavender font-elegant group-hover/skill:text-ethereal-blue transition-colors duration-300">
+                                {skill.name}
+                              </span>
+                            </div>
                           </div>
-                          <span className="text-primary-400 text-sm font-bold">
+                          <span className="text-ethereal-pink text-sm font-elegant font-bold">
                             {skill.level}%
                           </span>
                         </div>
                         
                         {/* Progress Bar */}
-                        <div className="w-full bg-dark-100 rounded-full h-2 overflow-hidden">
+                        <div className="w-full bg-supernatural-dark/50 rounded-full h-2 overflow-hidden border border-mystic-glow/20">
                           <motion.div
                             initial={{ width: 0 }}
                             whileInView={{ width: `${skill.level}%` }}
                             transition={{ 
                               duration: 1.2, 
-                              delay: categoryIndex * 0.1 + skillIndex * 0.1,
+                              delay: categoryIndex * 0.1 + skillIndex * 0.05,
                               ease: "easeOut"
                             }}
-                            className="h-full bg-gradient-to-r from-primary-500 to-primary-700 rounded-full relative"
+                            className="h-full rounded-full relative"
                             style={{
-                              background: `linear-gradient(90deg, ${skill.color}40, ${skill.color})`
+                              background: `linear-gradient(90deg, ${skill.color}60, ${skill.color}, #9d8df1)`
                             }}
                           >
-                            <div className="absolute inset-0 bg-gradient-to-r from-transparent to-white/20 rounded-full"></div>
                           </motion.div>
                         </div>
                       </motion.div>
@@ -190,33 +216,42 @@ const Skills: React.FC = () => {
             ))}
           </div>
 
-          {/* Additional Info Section */}
+          {/* Continuous Learning Section */}
           <motion.div
             variants={categoryVariants}
-            className="mt-16 text-center"
+            className="mt-20 text-center"
           >
-            <div className="bg-dark-200/30 backdrop-blur-sm border border-primary-500/20 rounded-2xl p-8 glass">
-              <h3 className="text-2xl font-bold text-white mb-4">
-                Always Learning
-              </h3>
-              <p className="text-gray-400 mb-6 max-w-3xl mx-auto">
-                Technology evolves rapidly, and so do I. I'm constantly exploring new frameworks, 
-                tools, and methodologies to stay at the forefront of web development. Currently diving deep into 
-                AI/ML integration, Web3 technologies, and advanced cloud architectures.
-              </p>
-              
-              <div className="flex flex-wrap justify-center gap-3">
-                {['AI/ML', 'Web3', 'Blockchain', 'Kubernetes', 'Microservices', 'Serverless'].map((tech, index) => (
-                  <motion.span
-                    key={tech}
-                    initial={{ opacity: 0, scale: 0 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.5, delay: index * 0.1 }}
-                    className="px-4 py-2 bg-gradient-to-r from-primary-500/20 to-primary-700/20 border border-primary-500/30 text-primary-300 rounded-full text-sm font-medium hover:from-primary-500/30 hover:to-primary-700/30 transition-all duration-300"
-                  >
-                    {tech}
-                  </motion.span>
-                ))}
+            <div className="mystical-window max-w-4xl mx-auto">
+              <div className="mystical-header">
+                <span className="text-ethereal-pink">◇</span> LEARNING
+              </div>
+              <div className="p-8">
+                <h3 className="text-3xl font-mystical font-bold text-ethereal-blue mb-6">
+                  Always Learning
+                </h3>
+                <p className="text-mystic-lavender mb-8 font-elegant leading-relaxed">
+                  Technology evolves rapidly, and I stay current with emerging trends and tools. 
+                  I believe in continuous learning and adapting to new technologies that can create 
+                  better solutions and experiences.
+                </p>
+                
+                <div className="flex flex-wrap justify-center gap-4">
+                  {['Machine Learning', 'Web Development', 'Cloud Computing', 'Mobile Apps', 'DevOps', 'Blockchain'].map((tech, index) => (
+                    <motion.span
+                      key={tech}
+                      initial={{ opacity: 0, scale: 0 }}
+                      whileInView={{ opacity: 1, scale: 1 }}
+                      whileHover={{ scale: 1.05, y: -2 }}
+                      transition={{ 
+                        duration: 0.5, 
+                        delay: index * 0.1
+                      }}
+                      className="px-4 py-2 supernatural-button-outline text-ethereal-blue font-elegant text-sm cursor-pointer"
+                    >
+                      {tech}
+                    </motion.span>
+                  ))}
+                </div>
               </div>
             </div>
           </motion.div>

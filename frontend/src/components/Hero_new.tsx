@@ -4,7 +4,7 @@ import { FaRocket, FaDownload, FaGithub, FaLinkedin, FaTwitter } from 'react-ico
 
 const Hero: React.FC = () => {
   const [typedText, setTypedText] = useState('');
-  const fullText = 'GANESH - Digital Mystic & Code Alchemist';
+  const fullText = 'Inevitable gs';
   
   const [currentRole, setCurrentRole] = useState(0);
   const roles = [

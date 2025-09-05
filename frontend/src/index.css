@@ -64,7 +64,52 @@ code {
   font-family: 'Orbitron', monospace;
 }
 
-/* Glass morphism effect */
+/* Supernatural Scrollbar */
+.scrollbar-supernatural {
+  scrollbar-width: thin;
+  scrollbar-color: #9d8df1 rgba(139, 92, 246, 0.1);
+}
+
+.scrollbar-supernatural::-webkit-scrollbar {
+  height: 8px;
+}
+
+.scrollbar-supernatural::-webkit-scrollbar-track {
+  background: rgba(139, 92, 246, 0.1);
+  border-radius: 10px;
+}
+
+.scrollbar-supernatural::-webkit-scrollbar-thumb {
+  background: linear-gradient(90deg, #9d8df1, #7c3aed);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(157, 141, 241, 0.5);
+}
+
+.scrollbar-supernatural::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(90deg, #b794f6, #9d8df1);
+  box-shadow: 0 0 15px rgba(157, 141, 241, 0.8);
+}
+
+/* Mystical Window Small Variant */
+.mystical-window-sm {
+  background: rgba(17, 13, 40, 0.8);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(157, 141, 241, 0.3);
+  border-radius: 12px;
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+/* Enhanced Supernatural Glow */
+.shadow-supernatural-glow {
+  box-shadow: 
+    0 0 20px rgba(157, 141, 241, 0.4),
+    0 0 40px rgba(124, 58, 237, 0.2),
+    0 0 60px rgba(139, 92, 246, 0.1);
+}
+
+/* Enhanced Glass Morphism for Supernatural Theme */
 .glass-card {
   background: rgba(157, 141, 241, 0.1);
   backdrop-filter: blur(20px);
@@ -80,6 +125,43 @@ code {
   background: rgba(157, 141, 241, 0.15);
   border-color: rgba(157, 141, 241, 0.3);
   transform: translateY(-2px);
+}
+
+/* Supernatural Scrollbar */
+.scrollbar-supernatural {
+  scrollbar-width: thin;
+  scrollbar-color: #9d8df1 rgba(139, 92, 246, 0.1);
+}
+
+.scrollbar-supernatural::-webkit-scrollbar {
+  height: 8px;
+}
+
+.scrollbar-supernatural::-webkit-scrollbar-track {
+  background: rgba(139, 92, 246, 0.1);
+  border-radius: 10px;
+}
+
+.scrollbar-supernatural::-webkit-scrollbar-thumb {
+  background: linear-gradient(90deg, #9d8df1, #7c3aed);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(157, 141, 241, 0.5);
+}
+
+.scrollbar-supernatural::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(90deg, #b794f6, #9d8df1);
+  box-shadow: 0 0 15px rgba(157, 141, 241, 0.8);
+}
+
+/* Mystical Window Small Variant */
+.mystical-window-sm {
+  background: rgba(17, 13, 40, 0.8);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(157, 141, 241, 0.3);
+  border-radius: 12px;
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
 }
 
 /* Mystical window styling */
@@ -453,4 +535,19 @@ code {
 .neon-purple {
   color: #e91e63;
   text-shadow: 0 0 10px #e91e63, 0 0 20px #e91e63, 0 0 30px #e91e63;
+}
+
+/* Supernatural Button Outline Variant */
+.supernatural-button-outline {
+  background: rgba(157, 141, 241, 0.1);
+  border: 1px solid rgba(157, 141, 241, 0.4);
+  border-radius: 25px;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.supernatural-button-outline:hover {
+  background: rgba(157, 141, 241, 0.2);
+  border-color: rgba(157, 141, 241, 0.6);
+  transform: translateY(-2px);
 }

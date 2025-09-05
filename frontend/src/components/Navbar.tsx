@@ -34,20 +34,20 @@ const Navbar: React.FC = () => {
 
   return (
     <motion.nav
-      initial={{ y: -100 }}
-      animate={{ y: 0 }}
+      initial={{ y: -100, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.8 }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? 'bg-dark-300/90 backdrop-blur-md shadow-lg'
+          ? 'mystical-window-sm backdrop-blur-xl shadow-supernatural-glow'
           : 'bg-transparent'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          {/* Logo */}
+          {/* Mystical Logo */}
           <motion.div
-            whileHover={{ scale: 1.05 }}
+            whileHover={{ scale: 1.05, rotate: 1 }}
             whileTap={{ scale: 0.95 }}
             className="flex-shrink-0"
           >
@@ -57,15 +57,16 @@ const Navbar: React.FC = () => {
                 e.preventDefault();
                 scrollToSection('#home');
               }}
-              className="text-2xl font-bold bg-gradient-to-r from-primary-400 to-primary-600 bg-clip-text text-transparent hover:from-primary-300 hover:to-primary-500 transition-all duration-300"
+              className="text-2xl font-mystical font-bold mystical-text hover:text-ethereal-blue transition-all duration-300 relative group"
             >
-              Portfolio
+              ◈ DIMENSIONAL PORTFOLIO ◈
+              <div className="absolute inset-0 bg-gradient-to-r from-mystic-glow/20 via-transparent to-mystic-glow/20 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 rounded"></div>
             </a>
           </motion.div>
 
-          {/* Desktop Navigation */}
+          {/* Supernatural Desktop Navigation */}
           <div className="hidden md:block">
-            <div className="ml-10 flex items-baseline space-x-4">
+            <div className="ml-10 flex items-baseline space-x-6">
               {navItems.map((item, index) => (
                 <motion.a
                   key={item.name}
@@ -74,41 +75,46 @@ const Navbar: React.FC = () => {
                     e.preventDefault();
                     scrollToSection(item.href);
                   }}
-                  className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-all duration-300 hover:bg-primary-600/20 relative group"
-                  whileHover={{ y: -2 }}
+                  className="text-mystic-lavender hover:text-ethereal-blue px-4 py-2 rounded-full text-sm font-elegant transition-all duration-300 hover:bg-mystic-purple/20 relative group border border-transparent hover:border-mystic-glow/30"
+                  whileHover={{ y: -3, scale: 1.05 }}
                   initial={{ opacity: 0, y: -20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                 >
                   {item.name}
-                  <span className="absolute inset-x-0 bottom-0 h-0.5 bg-primary-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
+                  <motion.span 
+                    className="absolute inset-x-0 bottom-0 h-0.5 bg-gradient-to-r from-mystic-purple via-ethereal-blue to-ethereal-pink transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 rounded-full"
+                    layoutId={`underline-${item.name}`}
+                  ></motion.span>
+                  {/* Mystical glow effect */}
+                  <div className="absolute inset-0 rounded-full bg-mystic-glow/5 transform scale-0 group-hover:scale-110 transition-transform duration-300"></div>
                 </motion.a>
               ))}
             </div>
           </div>
 
-          {/* Mobile menu button */}
+          {/* Mystical Mobile menu button */}
           <div className="md:hidden">
             <motion.button
-              whileHover={{ scale: 1.1 }}
+              whileHover={{ scale: 1.1, rotate: 180 }}
               whileTap={{ scale: 0.9 }}
               onClick={() => setIsOpen(!isOpen)}
-              className="text-gray-300 hover:text-white p-2 rounded-md transition-colors duration-200"
+              className="text-mystic-lavender hover:text-ethereal-blue p-3 rounded-full transition-all duration-300 border border-mystic-glow/30 hover:border-ethereal-blue/50 supernatural-button"
             >
-              {isOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
+              {isOpen ? <FaTimes size={20} /> : <FaBars size={20} />}
             </motion.button>
           </div>
         </div>
       </div>
 
-      {/* Mobile Navigation */}
+      {/* Mystical Mobile Navigation */}
       <motion.div
         initial={false}
         animate={isOpen ? { height: 'auto', opacity: 1 } : { height: 0, opacity: 0 }}
-        transition={{ duration: 0.3 }}
-        className="md:hidden overflow-hidden bg-dark-300/95 backdrop-blur-md"
+        transition={{ duration: 0.4, ease: "easeInOut" }}
+        className="md:hidden overflow-hidden mystical-window-sm mx-2 mt-2 rounded-xl"
       >
-        <div className="px-2 pt-2 pb-3 space-y-1">
+        <div className="px-4 pt-4 pb-4 space-y-2">
           {navItems.map((item, index) => (
             <motion.a
               key={item.name}
@@ -117,12 +123,14 @@ const Navbar: React.FC = () => {
                 e.preventDefault();
                 scrollToSection(item.href);
               }}
-              className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium transition-all duration-300 hover:bg-primary-600/20"
-              initial={{ x: -100, opacity: 0 }}
-              animate={isOpen ? { x: 0, opacity: 1 } : { x: -100, opacity: 0 }}
-              transition={{ duration: 0.3, delay: index * 0.1 }}
+              className="text-mystic-lavender hover:text-ethereal-blue block px-4 py-3 rounded-lg text-base font-elegant transition-all duration-300 hover:bg-mystic-purple/20 border border-transparent hover:border-mystic-glow/30 group relative"
+              initial={{ x: -50, opacity: 0 }}
+              animate={isOpen ? { x: 0, opacity: 1 } : { x: -50, opacity: 0 }}
+              transition={{ duration: 0.4, delay: index * 0.1 }}
+              whileHover={{ x: 5 }}
             >
-              {item.name}
+              <span className="relative z-10">◇ {item.name}</span>
+              <div className="absolute inset-0 bg-gradient-to-r from-mystic-purple/10 via-ethereal-blue/10 to-transparent rounded-lg transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
             </motion.a>
           ))}
         </div>

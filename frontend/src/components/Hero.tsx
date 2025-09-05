@@ -4,14 +4,14 @@ import { FaRocket, FaDownload, FaGithub, FaLinkedin, FaTwitter } from 'react-ico
 
 const Hero: React.FC = () => {
   const [typedText, setTypedText] = useState('');
-  const fullText = 'GANESH - Digital Mystic & Code Alchemist';
+  const fullText = 'Inevitable gs';
   
   const [currentRole, setCurrentRole] = useState(0);
   const roles = [
-    'AI/ML Sorcerer',
+    'AI Developer',
     'Game Creator',
-    'Python Wizard',
-    'Digital Artist'
+    'Python Developer',
+    'Problem Solver'
   ];
 
   useEffect(() => {
@@ -118,7 +118,7 @@ const Hero: React.FC = () => {
             className="mystical-window max-w-4xl mx-auto mb-8"
           >
             <div className="mystical-header">
-              <span className="text-mystic-glow">◈</span> DIMENSIONAL_GATEWAY.portal
+              <span className="text-mystic-glow">◈</span> WELCOME
             </div>
             <div className="p-8 font-elegant">
               <h1 className="text-5xl md:text-7xl font-bold mb-4 mystical-text">
@@ -148,17 +148,17 @@ const Hero: React.FC = () => {
             className="mystical-window max-w-4xl mx-auto mb-12"
           >
             <div className="mystical-header">
-              <span className="text-ethereal-pink">◇</span> essence.manifest()
+              <span className="text-ethereal-pink">◇</span> About Me
             </div>
             <div className="p-6 font-elegant text-mystic-lavender">
               <p className="mb-4 leading-relaxed text-lg">
-                ✦ Weaving neural networks and digital realities through the ancient art of code.
+                I build smart applications using AI and machine learning to solve real problems.
               </p>
               <p className="mb-4 leading-relaxed text-lg">
-                ✧ Channeling artificial intelligence and human creativity into transcendent experiences.
+                I love creating games, web apps, and tools that make people's lives easier.
               </p>
               <p className="text-ethereal-blue">
-                ◈ Status: Manifesting Dreams | Level: Transcendent | Access: Enlightened
+                Currently focused on AI development and creating meaningful digital experiences.
               </p>
             </div>
           </motion.div>
@@ -177,7 +177,7 @@ const Hero: React.FC = () => {
               className="supernatural-button px-8 py-4 text-lg font-bold relative group"
             >
               <FaRocket className="inline mr-3 group-hover:animate-float" />
-              EXPLORE CREATIONS
+              View My Work
             </motion.button>
             
             <motion.button
@@ -186,7 +186,7 @@ const Hero: React.FC = () => {
               className="supernatural-button px-8 py-4 text-lg font-bold relative group border-ethereal-pink text-ethereal-pink hover:bg-ethereal-pink"
             >
               <FaDownload className="inline mr-3 group-hover:animate-float" />
-              DOWNLOAD ESSENCE
+              Download Resume
             </motion.button>
           </motion.div>
 
